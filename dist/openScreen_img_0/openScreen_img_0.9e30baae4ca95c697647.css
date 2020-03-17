@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  min-width: 320px;
+}
+html body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  min-width: 320px;
+  position: relative;
+  font-size: 14px;
+}
+html .root {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-position: top center;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+html .root .litter-icon {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+

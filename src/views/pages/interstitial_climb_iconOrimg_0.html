@@ -168,23 +168,31 @@
                 } catch (err) {}
             };
         }
+        if (option.timeout != undefined) {
+            document.getElementById("button").style.display = 'none';
+            setTimeout(function() {
+                document.getElementById("button").style.display = 'block';
+            }, option.timeout * 1000)
+        }
 
         setTimeout(function() {
             body.style.display = 'block';
         }, 300);
     }
 
+
     /** 数据填充
      *  
      *  
-    getTmpInfo({
+     getTmpInfo({
         clickType: 1, // 1 全局可点， 2按钮可点 3全屏可点
         device: "portrait", // landscape || portrait
         icon: 'http://file02.16sucai.com/d/file/2014/0704/e53c868ee9e8e7b28c424b56afe2066d.jpg',
         imgUrl: "https://android-screenimgs.25pp.com/fs08/2019/11/06/3/106_2e288a5f5f4a9703365bff7c3e7abd30_234x360.jpg",
         appName: '花生记账',
         desc: '这是广告描述，最多展示两行，超出字符超出字符超出字符超出字符省略…',
-        link: '跳转链接'
+        link: '跳转链接',
+        timeout: 2,
     });
      *   
      */

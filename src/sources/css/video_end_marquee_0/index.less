@@ -14,9 +14,9 @@ html {
     box-sizing: border-box;
     padding   : 0;
     min-width : 320px;
-  
-    position  : relative;
-    font-size : 14px;
+
+    position : relative;
+    font-size: 14px;
 
   }
 
@@ -34,6 +34,13 @@ html {
     left               : 0;
 
     &.landscape {
+      .litter-icon {
+        position: absolute;
+        left    : 0.1rem;
+        bottom  : 0.1rem;
+        width   : 0.13rem;
+        height  : 0.13rem;
+      }
 
 
       .root-content {
@@ -46,24 +53,22 @@ html {
 
       .box {
 
-        position        : relative;
-        width           : 3.6rem;
-        position        : relative;
-        height          : 3rem;
-        padding         : 0.14rem 0;
-        box-sizing      : border-box;
-        margin          : 0.3rem auto;
-        background-color: rgba(2, 6, 35, 0.4);
-        border-radius   : 0.14rem;
+        position  : relative;
+        width     : 3.6rem;
+        position  : relative;
+        height    : 3.2rem;
+        padding   : 0.19rem 0;
+        box-sizing: border-box;
+        margin    : 0.2rem auto;
       }
 
       .box-wrap {
         position        : relative;
         z-index         : 3;
-        width           : 3.32rem;
+        width           : 3.22rem;
         box-sizing      : border-box;
-        height          : 2.72rem;
-        padding-top     : 0.26rem;
+        height          : 2.82rem;
+        padding-top     : 0.36rem;
         margin          : 0 auto;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius   : 0.08rem;
@@ -71,14 +76,14 @@ html {
 
 
       .icon {
-        width  : 0.68rem;
+        width  : 0.48rem;
         display: block;
         margin : 0 auto 0;
-        height : 0.68rem;
+        height : 0.48rem;
       }
 
       .title {
-        width      : 2.2rem;
+        width      : 2.02rem;
         overflow   : hidden;
         margin     : 0.12rem auto 0;
         text-align : center;
@@ -91,7 +96,7 @@ html {
 
       .desc {
         text-align : center;
-        margin     : 0.08rem auto 0;
+        margin     : 0.11rem auto 0;
         width      : 2.8rem;
         height     : 0.48rem;
         font-size  : 0.13rem;
@@ -110,19 +115,64 @@ html {
         }
       }
 
+      @keyframes move {
+
+        0%,
+        65% {
+          -webkit-transform: rotate(0deg);
+          transform        : rotate(0deg);
+        }
+
+        70% {
+          -webkit-transform: rotate(8deg);
+          transform        : rotate(8deg);
+        }
+
+        75% {
+          -webkit-transform: rotate(-8deg);
+          transform        : rotate(-8deg);
+        }
+
+        80% {
+          -webkit-transform: rotate(8deg);
+          transform        : rotate(8deg);
+        }
+
+        85% {
+          -webkit-transform: rotate(-8deg);
+          transform        : rotate(-8deg);
+        }
+
+        90% {
+          -webkit-transform: rotate(8deg);
+          transform        : rotate(8deg);
+        }
+
+        95% {
+          -webkit-transform: rotate(-8deg);
+          transform        : rotate(-8deg);
+        }
+
+        100% {
+          -webkit-transform: rotate(0deg);
+          transform        : rotate(0deg);
+        }
+      }
+
       .button {
-        margin       : 0.18rem auto 0;
+        margin       : 0.4rem auto 0;
         display      : block;
         text-align   : center;
-        line-height  : 0.46rem;
-        font-size    : 0.18rem;
+        line-height  : 0.36rem;
+        animation    : move 1.5s 0s infinite;
+        font-size    : 0.16rem;
         font-family  : Roboto-Medium, Roboto;
-        font-weight  : 500;
+        font-weight  : 300;
         color        : rgba(255, 255, 255, 1);
-        width        : 2.8rem;
-        height       : 0.46rem;
-        background   : linear-gradient(90deg, rgba(255, 129, 50, 1) 23%, rgba(255, 61, 50, 1) 100%);
-        border-radius: 0.24rem;
+        width        : 1.54rem;
+        height       : 0.36rem;
+        background   : rgba(73, 144, 226, 1);
+        border-radius: 0.04rem;
       }
 
       .bb,
@@ -144,12 +194,11 @@ html {
 
 
       .bb {
-        border-radius: 0.14rem;
-        position     : relative;
+        position: relative;
       }
 
-    
-      
+
+
       .bb:before,
       .bb:after {
         content      : '';
@@ -157,9 +206,9 @@ html {
         z-index      : 0;
         box-shadow   : inset 0 0 0 0;
         border       : 0.05rem solid;
-        
-        animation    : clipMe2 2s linear infinite;
-        border-image : linear-gradient(133deg, rgba(55, 201, 255, 1), rgba(50, 64, 255, 1), rgba(255, 98, 50, 1), rgba(225, 27, 255, 1)) 5 5;
+
+        animation   : clipMe2 2s linear infinite;
+        border-image: linear-gradient(133deg, rgba(55, 201, 255, 1), rgba(50, 64, 255, 1), rgba(255, 98, 50, 1), rgba(225, 27, 255, 1)) 5 5;
       }
 
       .bb:after {
@@ -174,25 +223,97 @@ html {
         }
 
         25% {
-          clip: rect(0px, 0.05rem, 3rem, 0px);
+          clip: rect(0px, 0.05rem, 3.20rem, 0px);
         }
 
         50% {
-          clip: rect(2.95rem, 3.6rem, 3rem, 0px);
+          clip: rect(3.15rem, 3.6rem, 3.2rem, 0px);
         }
 
         75% {
-          clip: rect(0px, 3.6rem, 3rem, 3.55rem);
+          clip: rect(0px, 3.6rem, 3.2rem, 3.15rem);
         }
       }
     }
 
     &.portrait {
+      @keyframes clipMe {
+
+        0%,
+        100% {
+          clip: rect(0px, 6.4rem, 0.1rem, 0px);
+        }
+
+        25% {
+          clip: rect(0px, 0.1rem, 5.69rem, 0px);
+        }
+
+        50% {
+          clip: rect(5.56rem, 6.4rem, 5.69rem, 0px);
+        }
+
+        75% {
+          clip: rect(0px, 6.4rem, 5.69rem, 5.56rem);
+        }
+      }
+
+      @keyframes move {
+
+        0%,
+        65% {
+          -webkit-transform: rotate(0deg);
+          transform        : rotate(0deg);
+        }
+
+        70% {
+          -webkit-transform: rotate(8deg);
+          transform        : rotate(8deg);
+        }
+
+        75% {
+          -webkit-transform: rotate(-8deg);
+          transform        : rotate(-8deg);
+        }
+
+        80% {
+          -webkit-transform: rotate(8deg);
+          transform        : rotate(8deg);
+        }
+
+        85% {
+          -webkit-transform: rotate(-8deg);
+          transform        : rotate(-8deg);
+        }
+
+        90% {
+          -webkit-transform: rotate(8deg);
+          transform        : rotate(8deg);
+        }
+
+        95% {
+          -webkit-transform: rotate(-8deg);
+          transform        : rotate(-8deg);
+        }
+
+        100% {
+          -webkit-transform: rotate(0deg);
+          transform        : rotate(0deg);
+        }
+      }
+
+
+      .litter-icon {
+        position: absolute;
+        left    : 0.14rem;
+        bottom  : 0.14rem;
+        width   : 0.23rem;
+        height  : 0.23rem;
+      }
 
 
       .root-content {
-        max-width : 640px;
-        margin: 0 auto;
+        max-width       : 640px;
+        margin          : 0 auto;
         height          : 100%;
         background-color: rgba(0, 0, 0, 0.5);
         box-sizing      : border-box;
@@ -205,20 +326,19 @@ html {
         position        : relative;
         width           : 100%;
         position        : relative;
-        height          : 5.33rem;
-        padding         : 0.25rem 0;
+        height          : 5.69rem;
+        padding         : 0.33rem 0;
         box-sizing      : border-box;
         margin          : 50% auto;
-        background-color: rgba(2, 6, 35, 0.4);
-        border-radius   : 0.14rem;
+        background-color: rgba(0, 0, 0, 0.5);
       }
 
       .box-wrap {
         position        : relative;
         z-index         : 3;
-        width           : 5.9rem;
+        width           : 5.72rem;
         box-sizing      : border-box;
-        height          : 4.83rem;
+        height          : 5.01rem;
         padding-top     : 0.46rem;
         margin          : 0 auto;
         background-color: rgba(255, 255, 255, 0.9);
@@ -227,16 +347,16 @@ html {
 
 
       .icon {
-        width  : 1.2rem;
+        width  : 0.85rem;
         display: block;
         margin : 0 auto 0;
-        height : 1.2rem;
+        height : 0.85rem;
       }
 
       .title {
-        width      : 2.8rem;
+        width      : 3.63rem;
         overflow   : hidden;
-        margin     : 0.21rem auto 0;
+        margin     : 0.37rem auto 0;
         text-align : center;
         font-size  : 0.32rem;
         line-height: 0.40rem;
@@ -247,12 +367,12 @@ html {
 
       .desc {
         text-align : center;
-        margin     : 0.14rem auto 0;
+        margin     : 0.2rem auto 0;
         width      : 4.98rem;
         height     : 0.85rem;
         font-size  : 0.23rem;
         font-weight: 400;
-        color      : rgba(122, 122, 122, 1);
+        color      : rgba(96, 94, 96, 1);
         line-height: 0.39rem;
         font-family: SourceHanSansCN-Normal, SourceHanSansCN;
       }
@@ -267,19 +387,22 @@ html {
       }
 
       .button {
-        margin       : 0.32rem auto 0;
+
+        animation    : move 1.5s 0s infinite;
+        margin       : 0.52rem auto 0;
         display      : block;
         text-align   : center;
-        line-height  : 0.82rem;
-        font-size    : 0.32rem;
+        line-height  : 0.64rem;
+        font-size    : 0.28rem;
         font-family  : Roboto-Medium, Roboto;
-        font-weight  : 500;
+        font-weight  : 300;
         color        : rgba(255, 255, 255, 1);
-        width        : 4.98rem;
-        height       : 0.82rem;
-        background   : linear-gradient(90deg, rgba(255, 129, 50, 1) 23%, rgba(255, 61, 50, 1) 100%);
-        border-radius: 0.49rem;
+        width        : 2.74rem;
+        height       : 0.64rem;
+        background   : rgba(73, 144, 226, 1);
+        border-radius: 0.04rem;
       }
+
 
       .bb,
       .bb:before,
@@ -300,8 +423,8 @@ html {
 
 
       .bb {
-        border-radius: 0.14rem;
-        position     : relative;
+        // border-radius: 0.14rem;
+        position        : relative;
       }
 
       .bb:before,
@@ -319,25 +442,7 @@ html {
         animation-delay: 1.5s;
       }
 
-      @keyframes clipMe {
 
-        0%,
-        100% {
-          clip: rect(0px, 6.4rem, 0.1rem, 0px);
-        }
-
-        25% {
-          clip: rect(0px, 0.1rem, 5.33rem, 0px);
-        }
-
-        50% {
-          clip: rect(5.23rem, 6.4rem, 5.33rem, 0px);
-        }
-
-        75% {
-          clip: rect(0px, 6.4rem, 5.33rem, 5.3rem);
-        }
-      }
     }
 
   }

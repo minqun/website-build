@@ -11,9 +11,9 @@ html {
 
 
     body {
-        height    : 100%;
-        width     : 100%;
-        background: rgba(255, 255, 255, 0);
+        height: 100%;
+        width : 100%;
+
         margin    : 0;
         box-sizing: border-box;
         padding   : 0;
@@ -43,6 +43,7 @@ html {
 
 
     .root {
+
         height    : 100%;
         margin    : 0 auto;
         display   : none;
@@ -53,6 +54,17 @@ html {
         top       : 0;
         left      : 0;
 
+        &::after {
+            content        : '';
+            backdrop-filter: blur(10px) brightness(110%);
+            position       : absolute;
+            top            : 0;
+            right          : 0;
+            bottom         : 0;
+            left           : 0;
+
+        }
+
         &.landscape {
             .content {
                 width : 100%;
@@ -60,6 +72,8 @@ html {
             }
 
             .root-content {
+                z-index    : 2;
+                position   : relative;
                 height     : 100%;
                 box-sizing : border-box;
                 max-width  : 3.2rem;
@@ -187,6 +201,8 @@ html {
         }
 
         &.portrait {
+
+
             .content {
                 width : 100%;
                 margin: 50% auto 0;
@@ -195,6 +211,8 @@ html {
             .root-content {
                 height     : 100%;
                 box-sizing : border-box;
+                z-index    : 2;
+                position   : relative;
                 max-width  : 640px;
                 font-family: '思源黑体 CN Bold Bold', "Microsoft Yahei";
                 margin     : 0 auto;
@@ -323,18 +341,30 @@ html {
 
 
     .root2 {
-        height          : 100%;
-        margin          : 0 auto;
-        display         : none;
-        width           : 100%;
-        opacity         : 1;
-        box-sizing      : border-box;
-        background-color: rgba(0, 0, 0, 0.4);
-        position        : absolute;
-        top             : 0;
-        left            : 0;
+        background: url(../../images/b1.png);
+
+        height    : 100%;
+        margin    : 0 auto;
+        display   : none;
+        width     : 100%;
+        opacity   : 1;
+        box-sizing: border-box;
+        position  : absolute;
+        top       : 0;
+        left      : 0;
 
 
+        &::before {
+            content        : '';
+            background     : rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px) brightness(110%);
+            position       : absolute;
+            top            : 0;
+            right          : 0;
+            bottom         : 0;
+            left           : 0;
+
+        }
 
         //TODO
         &.portrait {
@@ -347,9 +377,9 @@ html {
             }
 
             .root-content2 {
-                box-sizing: border-box;
-                max-width : 640px;
-
+                box-sizing : border-box;
+                max-width  : 640px;
+                z-index    : 2;
                 font-family: '思源黑体 CN Bold Bold', "Microsoft Yahei";
                 margin     : 50% auto 0;
                 position   : relative;
@@ -385,6 +415,7 @@ html {
                     padding: 0.23rem 0 0.21rem;
 
                     img {
+
                         width: 100%;
                     }
                 }
@@ -450,6 +481,8 @@ html {
                 font-family: '思源黑体 CN Bold Bold', "Microsoft Yahei";
                 margin     : 0.6rem auto 0;
                 min-width  : 344px;
+                position   : relative;
+                z-index    : 2;
                 width      : 3.44rem;
                 overflow   : hidden;
 
@@ -520,7 +553,7 @@ html {
                     width   : 0.26rem;
                     height  : 0.26rem;
                     position: absolute;
-                    top     : 0.26rem;
+                    top     : 0.18rem;
                     right   : 0.26rem;
                 }
 

@@ -74,7 +74,7 @@
             <!-- template -->
             <div class="content">
                 <div class="close-box">
-                    <img class="close-btn" onclick="onClose(event)" src="http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/close.png.png" alt="">
+                    <img class="close-btn" id="close-btn" onclick="onClose(event)" src="http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/close.png.png" alt="">
                 </div>
                 <div class="base-Box" id="content">
                     <!-- <img src="http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/bgs.png.png" style="z-index:0;position:absolute;width: 100%;height: 100%; left: 0;top:0;" alt=""> -->
@@ -173,19 +173,26 @@
                     } catch (err) {};
                 };
             }
+            if (option.timeout != undefined) {
+                document.getElementById("close-btn").style.display = 'none';
+                setTimeout(function() {
+                    document.getElementById("close-btn").style.display = 'block';
+                }, option.timeout * 1000)
+            }
 
         };
 
 
         /** 根据类型切换 0:立即下载 1:马上安装 2:立即查看 3：更新
-         getTmpInfo({
-            clickType: 1 // 0 全局可点， 1局部可点
+            getTmpInfo({
+            clickType: 1, // 0 全局可点， 1局部可点
             device: "portrait", // landscape || portrait
             icon: 'icon地址',
             title: '标题',
             desc: '描述',
             type: 1,
-            link: '跳转链接'
+            link: '跳转链接',
+            timeout: 2,
         })
         */
     </script>

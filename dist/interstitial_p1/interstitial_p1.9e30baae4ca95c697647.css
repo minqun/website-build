@@ -1,0 +1,318 @@
+html {
+  background: none;
+  width: 100%;
+  margin: 0;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  min-width: 320px;
+  height: 100%;
+}
+html body {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  min-width: 320px;
+  position: relative;
+  font-size: 14px;
+}
+@-webkit-keyframes scaleDraw {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@keyframes scaleDraw {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+html .root {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+html .root::after {
+  content: '';
+  -webkit-backdrop-filter: blur(10px) brightness(110%);
+          backdrop-filter: blur(10px) brightness(110%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+html .root.landscape .root-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: '思源黑体 CN Bold Bold', "Microsoft Yahei";
+  margin: 0 auto;
+  padding: 0 0.36rem;
+  width: 100%;
+  overflow: hidden;
+}
+html .root.landscape .root-content .icon-wrap {
+  padding-top: 0.1rem;
+  position: relative;
+}
+html .root.landscape .root-content .icon {
+  width: 0.2rem;
+  height: 0.2rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.1rem;
+  vertical-align: middle;
+}
+html .root.landscape .root-content .title {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0.4rem;
+  line-height: 0.4rem;
+  color: #fff;
+  overflow: hidden;
+  width: 90%;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.16rem;
+}
+html .root.landscape .root-content .desc {
+  color: #393939;
+  font-size: 0.2rem;
+  text-align: center;
+  width: 3rem;
+  line-height: 0.24rem;
+  display: box;
+  max-height: 0.72rem;
+  padding: 0.21rem 0 0 0;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  font-weight: bold;
+}
+html .root.landscape .root-content .go {
+  width: 1.3rem;
+  height: 0.64rem;
+  position: relative;
+  margin: 0.16rem auto 0;
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_1.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.landscape .root-content .go.g0 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_2.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.landscape .root-content .go.g1 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_3.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.landscape .root-content .go.g2 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_4.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.landscape .root-content .go.g3 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20200109/Button_4.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.landscape .root-content .hand {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Hand.png.png') no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0.18rem;
+  top: 0.16rem;
+  width: 0.36rem;
+  height: 0.68rem;
+  -webkit-animation: scaleDraw ease-in-out infinite 1200ms;
+          animation: scaleDraw ease-in-out infinite 1200ms;
+}
+html .root.landscape .root-content .close-box {
+  height: 0.55rem;
+  padding-top: 0.2rem;
+  width: 3.2rem;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html .root.landscape .root-content .close-btn {
+  width: 0.26rem;
+  height: 0.26rem;
+  display: block;
+}
+html .root.landscape .root-content .base-Box {
+  position: relative;
+  height: 2.02rem;
+  margin: 0 auto;
+  width: 3.2rem;
+  background-repeat: no-repeat;
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/C_BG.png.png') no-repeat center;
+  background-size: 100% 98%;
+}
+html .root.landscape .root-content .litter-icon {
+  width: 0.14rem;
+  height: 0.14rem;
+  position: absolute;
+  right: 0.1rem;
+  bottom: 0.1rem;
+}
+html .root.portrait .content {
+  margin: 50% auto 0;
+}
+html .root.portrait .root-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 640px;
+  font-family: '思源黑体 CN Bold Bold', "Microsoft Yahei";
+  margin: 0 auto;
+  padding: 0 0.36rem;
+  width: 100%;
+  overflow: hidden;
+}
+html .root.portrait .root-content .icon-wrap {
+  padding-top: 0.28rem;
+  position: relative;
+}
+html .root.portrait .root-content .icon {
+  width: 0.36rem;
+  height: 0.36rem;
+  position: absolute;
+  top: 0.35rem;
+  left: 0.18rem;
+  vertical-align: middle;
+}
+html .root.portrait .root-content .title {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0.68rem;
+  line-height: 0.54rem;
+  color: #fff;
+  overflow: hidden;
+  width: 90%;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.18rem;
+}
+html .root.portrait .root-content .desc {
+  color: #393939;
+  font-size: 0.36rem;
+  text-align: center;
+  width: 4.5rem;
+  line-height: 0.53rem;
+  display: box;
+  max-height: 1.1rem;
+  padding: 0.43rem 0 0 0;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  font-weight: bold;
+}
+html .root.portrait .root-content .go {
+  width: 2.6rem;
+  height: 0.64rem;
+  position: relative;
+  margin: 0.32rem auto 0;
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_1.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.portrait .root-content .go.g0 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_2.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.portrait .root-content .go.g1 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_3.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.portrait .root-content .go.g2 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Button_4.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.portrait .root-content .go.g3 {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20200109/Button_4.png.png') no-repeat center;
+  background-size: 100%;
+}
+html .root.portrait .root-content .hand {
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/Hand.png.png') no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0.36rem;
+  top: 0.25rem;
+  width: 0.55rem;
+  height: 0.68rem;
+  -webkit-animation: scaleDraw ease-in-out infinite 1200ms;
+          animation: scaleDraw ease-in-out infinite 1200ms;
+}
+html .root.portrait .root-content .close-box {
+  height: 0.92rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 0.26rem;
+}
+html .root.portrait .root-content .close-btn {
+  width: 0.46rem;
+  height: 0.46rem;
+  display: block;
+}
+html .root.portrait .root-content .base-Box {
+  position: relative;
+  height: 3.6rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background: url('http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/C_BG.png.png') no-repeat center;
+  background-size: 100% 98%;
+}
+html .root.portrait .root-content .litter-icon {
+  width: 0.25rem;
+  height: 0.25rem;
+  position: absolute;
+  right: 0.14rem;
+  bottom: 0.14rem;
+}
+

@@ -109,6 +109,10 @@
         desc.innerText = option.desc;
         title.innerText = option.title;
         icon.src = option.icon;
+        if (option.background != undefined) {
+            root.style.backgroundImage = 'url(' + option.background + ')'
+        }
+
         content.onclick = function(event) {
             if (option.clickType == 1) {
                 window.location = option.link;
@@ -133,13 +137,14 @@
 
 
     /**
-    getTmpInfo({
-            clickType: 3, // 1 全局可点， 2按钮可点 3全屏可点
-            icon: "icon地址",
-            link: "跳转链接",
-            title: "应用名称",
-            desc: "这里是广告描述， 居中显示 最多展示三行",
-        })
+     getTmpInfo({
+        clickType: 3, // 1 全局可点， 2按钮可点 3全屏可点
+        icon: "icon地址",
+        link: "跳转链接",
+        background: 'http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191223/red_envelope_BG1.png.png',
+        title: "应用名称",
+        desc: "这里是广告描述， 居中显示 最多展示三行",
+    })
         */
 </script>
 

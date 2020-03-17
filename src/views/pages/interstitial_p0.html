@@ -131,7 +131,7 @@
                     <img id="imgUrl" />
                 </div>
             </div>
-            <img class="close-btn" onclick="onClose(event)" src="http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/close.png.png" alt="" />
+            <img class="close-btn" id="close-btn" onclick="onClose(event)" src="http://zhizh-front.oss-cn-shenzhen.aliyuncs.com/2/20191203/close.png.png" alt="" />
         </div>
     </div>
     <script>
@@ -220,21 +220,40 @@
                     };
                 }
             }
+            if (option.timeout != undefined) {
+                document.getElementById("close-btn").style.display = 'none';
+                setTimeout(function() {
+                    document.getElementById("close-btn").style.display = 'block';
+                }, option.timeout * 1000)
+            }
         }
-
-        /** 
-        注： 参数pkgName 有传值 更换模板，type 类型失效，clickType不支持按钮点击
-        根据类型切换 0:立即下载 1:马上安装 2:立即查看 3： 更新
-           getTmpInfo({
+        getTmpInfo({
             clickType: 1, // 1 全局可点， 2按钮可点 3全屏可点
             pkgName: '包名',
-            device: "landscape", // landscape || portrait
+            device: "portrait", // landscape || portrait
             icon: 'https://android-artworks.25pp.com/fs08/2019/11/06/9/106_e640ac761d50f1c5fe86314ef348700e_con_130x130.png',
             imgUrl: 'http://img2.imgtn.bdimg.com/it/u=2449211872,2364889514&fm=15&gp=0.jpg',
             title: '标题',
             desc: '描述',
             type: 1,
-            link: '跳转链接'
+            link: '跳转链接',
+            timeout: 2,
+        })
+
+        /** 
+        注： 参数pkgName 有传值 更换模板，type 类型失效，clickType不支持按钮点击
+        根据类型切换 0:立即下载 1:马上安装 2:立即查看 3： 更新
+         getTmpInfo({
+            clickType: 1, // 1 全局可点， 2按钮可点 3全屏可点
+            pkgName: '包名',
+            device: "portrait", // landscape || portrait
+            icon: 'https://android-artworks.25pp.com/fs08/2019/11/06/9/106_e640ac761d50f1c5fe86314ef348700e_con_130x130.png',
+            imgUrl: 'http://img2.imgtn.bdimg.com/it/u=2449211872,2364889514&fm=15&gp=0.jpg',
+            title: '标题',
+            desc: '描述',
+            type: 1,
+            link: '跳转链接',
+            timeout: 2,
         })
          
 

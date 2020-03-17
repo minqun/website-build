@@ -99,6 +99,12 @@
                 } catch (err) {}
             };
         }
+        if (option.timeout != undefined) {
+            document.getElementById("button").style.display = 'none';
+            setTimeout(function() {
+                document.getElementById("button").style.display = 'block';
+            }, option.timeout * 1000)
+        }
 
         setTimeout(function() {
             body.style.display = 'block';
@@ -107,11 +113,12 @@
 
     /** 数据填充
      *  
-     *   getTmpInfo({
+     *    getTmpInfo({
         clickType: 1, // 1 全局可点， 2按钮可点 3全屏可点
         device: "portrait", // landscape || portrait
         imgUrl: "http://file02.16sucai.com/d/file/2014/0704/e53c868ee9e8e7b28c424b56afe2066d.jpg",
-        link: '跳转链接'
+        link: '跳转链接',
+        timeout: 2,
     });
     */
 </script>

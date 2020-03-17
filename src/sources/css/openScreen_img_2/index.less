@@ -1,0 +1,101 @@
+html {
+    height    : 100%;
+    width     : 100%;
+    margin    : 0;
+    box-sizing: border-box;
+    padding   : 0;
+    min-width : 320px;
+
+
+    body {
+        height    : 100%;
+        width     : 100%;
+        margin    : 0;
+        box-sizing: border-box;
+        padding   : 0;
+        min-width : 320px;
+        position  : relative;
+        font-size : 14px;
+
+    }
+
+    .root {
+        height             : 100%;
+        width              : 100%;
+        background         : url('../../images/b2.png') no-repeat;
+        background-position: top center;
+        background-size    : 100% auto;
+        background-color   : #fff;
+        background-repeat  : no-repeat;
+        box-sizing         : border-box;
+        position           : absolute;
+        top                : 0;
+        left               : 0;
+
+        .litter-icon {
+            width   : 0.23rem;
+            height  : 0.23rem;
+            position: absolute;
+            right   : 0.14rem;
+            bottom  : 0.14rem;
+
+        }
+
+        .timeout {
+            background-color: rgba(0, 0, 0, 0.4);
+            width           : 1.3rem;
+            font-size       : 0.12rem;
+            top             : 0.25rem;
+            right           : 0.25rem;
+            height          : 0.36rem;
+            line-height     : 0.36rem;
+            text-align      : center;
+            color           : #fff;
+            position        : absolute;
+            opacity         : 0.9;
+            border-radius   : 0.18rem;
+        }
+
+        .pkgInfo {
+            text-align: center;
+            margin-top: 0.82rem;
+            color     : #fff;
+
+            #icon {
+                vertical-align: middle;
+                width         : 0.57rem;
+                height        : 0.57rem;
+
+            }
+
+            #pkgName {
+                margin-left: 0.2rem;
+                height     : 0.36rem;
+                font-size  : 0.28rem;
+                font-family: SourceHanSansCN-Bold, SourceHanSansCN;
+                font-weight: bold;
+                color      : rgba(255, 255, 255, 1);
+                line-height: 0.36rem;
+                ;
+
+                letter-spacing: 2px;
+
+                &.line {
+                    display   : block;
+                    width     : 3.84rem;
+                    margin    : 0 auto;
+                    text-align: center;
+                    margin-top: 0.18rem;
+
+                }
+            }
+
+
+        }
+
+    }
+
+
+
+
+}

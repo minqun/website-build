@@ -1,0 +1,163 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  min-width: 320px;
+}
+html body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  min-width: 320px;
+  position: relative;
+  font-size: 14px;
+}
+html .root {
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+html .root::after {
+  content: '';
+  -webkit-backdrop-filter: blur(10px) brightness(110%);
+          backdrop-filter: blur(10px) brightness(110%);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+html .root .root-content {
+  z-index: 2;
+  position: relative;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-family: '思源黑体 CN Bold Bold', "Microsoft Yahei";
+  overflow: auto;
+}
+@media screen and (min-device-height: 800px) and (max-device-width: 470px) {
+  html .root .root-content {
+    padding: 44px 0 34px 0;
+  }
+}
+@media screen and (min-device-width: 800px) and (max-device-height: 600px) {
+  html .root .root-content {
+    padding: 0 34px 0 44px;
+  }
+}
+@media all and (orientation: landscape) {
+  html .root {
+    background-size: 100%;
+    background-position: top center;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+  }
+  html .root .main-box {
+    width: 2.8rem;
+    text-align: center;
+    margin: 1rem auto 0;
+  }
+  html .root .main-box .title {
+    font-size: 0.2rem;
+    width: 1.9rem;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #fff;
+    line-height: 0.22rem;
+  }
+  html .root .main-box .desc {
+    margin-top: 0.16rem;
+    font-size: 0.16rem;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 0.22rem;
+    color: #fff;
+    white-space: nowrap;
+  }
+  html .root .main-box .button {
+    display: block;
+    margin: 0.48rem auto 0;
+    line-height: 0.46rem;
+    font-size: 0.18rem;
+    font-family: Roboto-Medium, Roboto;
+    font-weight: 500;
+    color: #ffffff;
+    width: 2.08rem;
+    height: 0.46rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(23%, #ff8132), to(#ff3d32));
+    background: -o-linear-gradient(left, #ff8132 23%, #ff3d32 100%);
+    background: linear-gradient(90deg, #ff8132 23%, #ff3d32 100%);
+    border-radius: 0.43rem;
+  }
+}
+@media all and (orientation: landscape) and screen and (min-device-width: 800px) and (max-device-height: 600px) {
+  html .root .root-content {
+    padding: 0 34px 0 44px;
+  }
+}
+@media all and (orientation: portrait) {
+  html .root {
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  html .root .main-box {
+    width: 5rem;
+    text-align: center;
+    margin: 4.4rem auto 0;
+  }
+  html .root .main-box .title {
+    font-size: 0.36rem;
+    width: 3.4rem;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #fff;
+    line-height: 0.4rem;
+  }
+  html .root .main-box .desc {
+    margin-top: 0.28rem;
+    font-size: 0.28rem;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 0.39rem;
+    color: #fff;
+    white-space: nowrap;
+  }
+  html .root .main-box .button {
+    display: block;
+    margin: 0.85rem auto 0;
+    line-height: 0.82rem;
+    font-size: 0.32rem;
+    font-family: Roboto-Medium, Roboto;
+    font-weight: 500;
+    color: #ffffff;
+    width: 3.7rem;
+    height: 0.82rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(23%, #ff8132), to(#ff3d32));
+    background: -o-linear-gradient(left, #ff8132 23%, #ff3d32 100%);
+    background: linear-gradient(90deg, #ff8132 23%, #ff3d32 100%);
+    border-radius: 0.43rem;
+  }
+}
+@media all and (orientation: portrait) and screen and (min-device-height: 800px) and (max-device-width: 470px) {
+  html .root .root-content {
+    padding: 44px 0 34px 0;
+  }
+}
+
