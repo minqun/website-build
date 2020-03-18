@@ -1,1 +1,0 @@
-import name from "@source/css/interstitial_climb_0";

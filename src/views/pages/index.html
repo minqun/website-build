@@ -1,16 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>ad</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <meta name="renderer" content="webkit">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover" />
+    <meta name="renderer" content="webkit" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- 兼容旧手机 -->
-    <meta name="HandheldFriendly" content="true">
+    <meta name="HandheldFriendly" content="true" />
     <!-- 点击无高亮 -->
-    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-tap-highlight" content="no" />
     <!-- iphone隐藏工具菜单栏 -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- 忽视电话识别 -->
@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
     <div class="root">
         <div class="root-content">
             <!-- template -->
@@ -32,21 +31,25 @@
             <!-- template -->
         </div>
     </div>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/eruda"></script>
 
-    <script>
-        // if (document.getElementById("root")) {
-        //             if (window.innerWidth > window.innerHeight) {
-        //                 document.getElementById("root").className = 'root landscape'
-        //             } else {
-        //                 document.getElementById("root").className = 'root portrait'
-        //             }
-
-        //         }
-        eruda.init();
-    </script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=160612785"></script>
     <script src="https://zeptojs.com/zepto.min.js" inline></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', '160612785', {
+            send_page_view: true,
+            cookie_update: true,
+            cookie_prefix: '_zzm',
+            cookie_domain: 'auto',
+            cookie_expires: 7 * 24 * 60 * 60 // 28 days, in seconds
+        });
+    </script>
 </body>
 
 </html>

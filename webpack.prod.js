@@ -1,23 +1,32 @@
-const path = require('path')
+const path = require('path');
 
-const webpackMerge = require('webpack-merge')
-const BaseConfig = require('./webpack.base')
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin')
+const webpackMerge = require('webpack-merge');
+const BaseConfig = require('./webpack.base');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 let config = webpackMerge({}, BaseConfig, {
     mode: 'production',
     module: {
         rules: [{
-            test: /\.(png|jpg|gif|svg)$/,
-            loader: "file-loader",
-            options: {
-                name: "[path][name].[ext]?[hash]",
+                test: /\.(png|jpg|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'src/sources/images/'
+                    }
+                }]
             }
-        }]
-
+            // {
+            //     test: /\.(png|jpg|gif|svg)$/,
+            //     loader: 'file-loader',
+            //     options: {
+            //         name: '[name].[ext]?[hash]',
+            //         outputPath: 'src/sources/images/'
+            //     }
+            // }
+        ]
     },
-
 
     externals: {
         eruda: 'eruda'
@@ -60,5 +69,5 @@ let config = webpackMerge({}, BaseConfig, {
     //   }
     // },
     plugins: [new CleanWebpackPlugin()]
-})
-module.exports = config
+});
+module.exports = config;

@@ -1,0 +1,10 @@
+body {
+  color: yellow;
+}
+html body {
+  background: url(/src/sources/images/bg.eb52e6e2e3ba3efac5181ebdb15559d4.png) no-repeat;
+  margin: 0;
+  padding: 0;
+  color: blue;
+}
+
